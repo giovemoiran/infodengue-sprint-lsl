@@ -1,4 +1,4 @@
-# LSL model for the inodengue sprint
+# LSL model for the infodengue sprint
 This repo contains the models used to forecast the dengue cases for the infodenfue spint.
 
 # Forecast target
