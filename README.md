@@ -20,7 +20,7 @@ The submitted model includes as predictor a combination of:
 # Results
 
 The prediction for the Validation Dataset (October 2022 - September 2023) are shown below:
-
+![Validation Set 1](test1_plot.png)
 The prediction for the Validation Dataset (October 2023 - June 2024) are shown below:
 
 
