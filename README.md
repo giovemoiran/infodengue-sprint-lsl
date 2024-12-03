@@ -1,9 +1,9 @@
 # Authors
-- Giovenale Moirano:[link](https://www.bsc.es/moirano-giovenale)
-- Chloe Fletcher:[link](https://www.bsc.es/fletcher-chloe)
-- Raúl Capellán:[link](https://www.bsc.es/ca/capellan-fernandez-raul)
-- Daniela Lührsen:[link](https://www.bsc.es/es/luhrsen-daniela-sofie)
-- Rachel Lowe:[link](https://www.bsc.es/lowe-rachel)
+- Giovenale Moirano: [link](https://www.bsc.es/moirano-giovenale)
+- Chloe Fletcher: [link](https://www.bsc.es/fletcher-chloe)
+- Raúl Capellán: [link](https://www.bsc.es/ca/capellan-fernandez-raul)
+- Daniela Lührsen: [link](https://www.bsc.es/es/luhrsen-daniela-sofie)
+- Rachel Lowe: [link](https://www.bsc.es/lowe-rachel)
 
 
 # LSL model for the infodengue sprint
