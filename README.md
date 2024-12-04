@@ -15,11 +15,11 @@ This repository contains the final model used to forecast dengue cases for the I
 An epidemiological year was defined as the period spanning from epidemiological week 41 (the first week of October) to epidemiological week 40 (the last week of September) of the following year.
 
 # Model 
-We developed a spatio-temporal model using R-INLA (see model_fit_and_prediction.R). The model consists of a Bayesian spatio-temporal framework that includes three sets of random effects:
+We adopted a a Bayesian spatio-temporal modelling framework using R-INLA (see model_fit_and_prediction.R). We fit a spatio-temporal model that includes three sets of random effects:
 
--  Conditional autoregressive (“bym2”) spatial random effects for the brazilian health regions  (i = 1,…,450)
--  Random walk 2 weekly random effects for the week of the year (t), replicated by the 27 Brazilian states  
--  Random walk 1 yearly random effect for the year (j) replicated by the 5 Brazilian Macroregion
+-  A conditional autoregressive (“bym2”) spatial random effects for the brazilian health regions  (i = 1,…,450).
+-  A random walk 2 weekly random effects for the week of the year (t), replicated by the 27 Brazilian states.  
+-  A random walk 1 yearly random effect for the year (j) replicated by the 5 Brazilian Macroregion.
 
 The submitted model includes the following covariates:
 
