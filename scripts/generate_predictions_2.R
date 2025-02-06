@@ -15,7 +15,7 @@
 #Load packages and functions
 packages <- c("INLA", "dplyr","sf","stringr","ggplot2")
 lapply(packages, library, character.only = TRUE)
-source("functions.R")
+source("functions/functions.R")
 
 #Create neighbourhood matrix
 shp <- read_sf("data/shp/BR_Regionais.shp")  
@@ -36,12 +36,12 @@ data <- read.csv("data/data.csv")
 
 # Filter data 
 data <- data %>%
-  filter(train_1 =="True" | target_1 == "True")
+  filter(train_2 =="True" | target_2 == "True")
 
 #Set casos to NA if target_1 == "True"
 data <- data %>% 
   mutate(real_cases = casos,
-         casos = ifelse(target_1 == "True", NA, casos))
+         casos = ifelse(target_2 == "True", NA, casos))
 
 #Format variables for inla 
 data$macro<- substr(data$regional_geocode,0,1)
@@ -54,7 +54,7 @@ data <- data %>%
          uf_id = as.numeric(factor(uf)), 
          uf_id2 =  as.numeric(factor(uf)),
          uf_id3 = as.numeric(factor(uf))) %>%
-         mutate(week_id = ifelse(week_id == 53, 52, week_id))
+  mutate(week_id = ifelse(week_id == 53, 52, week_id))
 
 
 # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -121,7 +121,7 @@ plot <- data_plot %>%
         plot.title=element_text(hjust=0.5), panel.border = element_blank())
 
 #Save posterior as a graph 
-ggsave(plot,dpi = "retina", file = "test1_post_pred.tiff")
+ggsave(plot,dpi = "retina", file = "test2_post_pred.tiff")
 
 # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ## END
