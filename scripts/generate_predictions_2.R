@@ -107,7 +107,7 @@ data_plot <- data %>% group_by(date, epiweek, uf_id, uf) %>%
 
 plot <- data_plot %>%
   mutate(date=as.Date(date)) %>% 
-  filter(date >= as.Date("2022-10-01")) %>%
+  filter(date >= as.Date("2023-10-01")) %>%
   ggplot(aes(x=date)) +
   geom_ribbon(aes(ymin=p5, ymax=p95), fill="deeppink2", alpha=0.4)+
   geom_line(aes(y=median, colour="Median")) +
