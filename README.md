@@ -33,9 +33,9 @@ The three meteorological parameters are included in the model with an interactio
 From the fitted model, we generated 1,000 samples from the posterior predictive distribution at the Brazilian health region level. These posterior samples were then aggregated at the state level and summarized using the 5th, 50th, and 95th percentiles.
 
 The prediction for the Validation Dataset (October 2022 - September 2023) are shown below:
-![Validation Set 1](test1_plot.png)
+![Validation Set 1](test1_post_pred.tiff)
 The prediction for the Validation Dataset (October 2023 - June 2024) are shown below:
-![Validation Set 2](test2_plot.png)
+![Validation Set 2](test2_post_pred.tiff)
 
 # Results from the challenge 
 Model performance compared to other models submitted for the challenge is available at the following  [link](https://github.com/Mosqlimate-project/sprint-template/blob/main/scores/scores.md)
