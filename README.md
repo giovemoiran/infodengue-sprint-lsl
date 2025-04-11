@@ -1,3 +1,5 @@
+
+
 # Authors
 - Giovenale Moirano: [link](https://www.bsc.es/moirano-giovenale)
 - Chloe Fletcher: [link](https://www.bsc.es/fletcher-chloe)
@@ -7,12 +9,16 @@
 
 
 # LSL model for the infodengue sprint
-This repository contains the final model used to forecast dengue cases for the InfoDengue sprint. The InfoDengue sprint was a model challenge organized by the Mosqlimate project [Sprint Repository](https://github.com/Mosqlimate-project/sprint-template/tree/main). During 2024, dengue spread to southern regions of Brazil and to higher altitudes where epidemics had not previously been recorded. The incidence rate far exceeded that of previous years. The objective of this sprint was to promote, in a standardized way, the training of predictive models with the aim of developing an ensemble forecast for dengue in Brazil. The challenge required modelers to predict weekly dengue cases at the state level (27 units) for two epidemiological years:
+This repository contains the final model used to forecast dengue cases for the InfoDengue sprint. The InfoDengue sprint was a model challenge organized by the Mosqlimate project [Sprint Repository](https://github.com/Mosqlimate-project/sprint-template/tree/main). During 2024, dengue spread to southern regions of Brazil and to higher altitudes where epidemics had not previously been recorded. The incidence rate far exceeded that of previous years. The objective of this sprint was to promote, in a standardized way, the training of predictive models with the aim of developing an ensemble forecast for dengue in Brazil. The challenge required modelers to predict weekly dengue cases at the state level (27 units) for an entire epidemiological year, defined as the period spanning from epidemiological week 41 (the first week of October) to epidemiological week 40 (the last week of September) of the following year.
 
-- Validation Test 1: 2022–2023
-- Validation Test 2: 2023–2024
+Participants were asked to train models using data from 2010 to 2021 and submit predictions for model evaluation targeting two epidemiological years:
 
-An epidemiological year was defined as the period spanning from epidemiological week 41 (the first week of October) to epidemiological week 40 (the last week of September) of the following year.
+- Validation Year 1: 2022–2023
+- Validation Year 2: 2023–2024
+
+Finally participants were asked to submit their prediction for:
+
+- Target Year: 2024-2025.
 
 # Model 
 We adopted a a Bayesian spatio-temporal modelling framework using R-INLA (see model_fit_and_prediction.R). We fit a spatio-temporal model that includes three sets of random effects:
@@ -30,10 +36,11 @@ The submitted model includes the following covariates:
 The three meteorological parameters are included in the model with an interaction term among them.
 
 # Results
-From the fitted model, we generated 1,000 samples from the posterior predictive distribution at the Brazilian health region level. These posterior samples were then aggregated at the state level and summarized using the 5th, 50th, and 95th percentiles.
+For validation years 2022-23 and 2023-2024 we produced dengue forecasts using observed climatic data, while for target year 2024-2025, seasonal climate forecasts were used. 
 
-Predicted Cases for Test Year 1: ![alt text](https://github.com/giovemoiran/infodengue-sprint-lsl/blob/main/test1_post_pred.tiff)
+From the identified model, we generated 1,000 samples from the posterior predictive distribution at the Brazilian health region level. These posterior samples were then aggregated at the state level and summarized using the 5th, 50th, and 95th percentiles.
 
 # Results from the challenge 
 Model performance compared to other models submitted for the challenge is available at the following  [link](https://github.com/Mosqlimate-project/sprint-template/blob/main/scores/scores.md)
+
 
